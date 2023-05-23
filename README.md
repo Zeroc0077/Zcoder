@@ -2,7 +2,7 @@
 a tool for some easy encode(Huffman and LZ78)
 
 ## Usage
-```              
+```bash           
 git clone https://github.com/Zeroc0077/Zcoder.git
 
 cd Zcoder
@@ -36,5 +36,12 @@ options:
   -L, --LZ              use LZ coding to compress the file
   -T file1 file2        test the file before compression and after decompression
 ```
+the `channel/lab2_program_linux_amd64.run` is a test program that can be used to test the your hamming encode/decode program. The `phase` stands for different error rate. The `mode` stands for the different mode of the program. Like `source`, `channel`, `verify`.
+
+`Usage`:
+```bash
+./lab2_program_linux_amd64.run -mode=source -phase=1 | python hamming_encode.py | ./lab2_program_linux_amd64.run -mode=channel -phase=1 | python hamming_decode.py | ./lab2_program_linux_amd64.run -mode=verify -phase=1
+```
+
 ## Test
 some test file can stored in the encode_test folder.
